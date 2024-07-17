@@ -9,8 +9,8 @@ import android.util.Log;
 public class HardwareKeyWatcher {
 
     private static final String TAG = "HardwareKeyWatcher";
-    private Context mContext;
-    private IntentFilter mFilter;
+    private final Context mContext;
+    private final IntentFilter mFilter;
     private OnHardwareKeysPressedListener mListener;
     private InnerReceiver mReceiver;
 
