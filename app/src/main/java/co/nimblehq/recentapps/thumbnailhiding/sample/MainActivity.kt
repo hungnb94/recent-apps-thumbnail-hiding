@@ -9,9 +9,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : RecentAppsThumbnailHidingActivity() {
 
-    override val enableSecureFlagOnLowApiDevices: Boolean = true
+    override val enableSecureFlagOnLowApiDevices: Boolean = false
 
-    override val enableSecureFlagOnCustomGestureNavigationDevices: Boolean = true
+    override val enableSecureFlagOnCustomGestureNavigationDevices: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

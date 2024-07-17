@@ -85,14 +85,10 @@ public class HardwareKeyWatcher {
     }
 
     private void logForDebugging(String message) {
-        if (BuildConfig.DEBUG) {
-            Log.d(TAG, message);
-        }
+        Log.d(TAG, message);
     }
 
     private void logForInfo(String message) {
-        if (BuildConfig.DEBUG) {
-            Log.i(TAG, message);
-        }
+        Log.i(TAG, message);
     }
 }
