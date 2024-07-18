@@ -8,10 +8,9 @@ import co.nimblehq.recentapps.thumbnailhiding.RecentAppsThumbnailHidingActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : RecentAppsThumbnailHidingActivity() {
-
     override val enableSecureFlagOnLowApiDevices: Boolean = false
 
-    override val enableSecureFlagOnCustomGestureNavigationDevices: Boolean = false
+    override val enableSecureFlagOnCustomGestureNavigationDevices: Boolean = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +19,7 @@ class MainActivity : RecentAppsThumbnailHidingActivity() {
 
     override fun onRecentAppsTriggered(
         activity: Activity,
-        inRecentAppsMode: Boolean
+        inRecentAppsMode: Boolean,
     ) {
         ivRecentAppsLogo.visibility = if (inRecentAppsMode) VISIBLE else GONE
     }
