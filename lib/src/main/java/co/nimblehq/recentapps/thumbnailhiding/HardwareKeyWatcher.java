@@ -1,6 +1,7 @@
 package co.nimblehq.recentapps.thumbnailhiding;
 
 import android.content.*;
+import android.os.Build;
 import android.util.Log;
 
 /**
@@ -34,7 +35,11 @@ public class HardwareKeyWatcher {
     public void startWatch() {
         if (mReceiver != null) {
             logForDebugging("startWatch on " + mContext);
-            mContext.registerReceiver(mReceiver, mFilter);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                mContext.registerReceiver(mReceiver, mFilter, Context.RECEIVER_EXPORTED);
+            } else {
+                mContext.registerReceiver(mReceiver, mFilter);
+            }
         }
     }
 
