@@ -1,8 +1,10 @@
 [versions]
 agp = "8.5.1"
 kotlin = "1.9.0"
+lifecycleCommonJvm = "2.8.3"
 
 [libraries]
+androidx-lifecycle-common-jvm = { group = "androidx.lifecycle", name = "lifecycle-common-jvm", version.ref = "lifecycleCommonJvm" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
