@@ -2,14 +2,16 @@ package co.nimblehq.recentapps.thumbnailhiding.sample
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
 
 class SplashActivity : AppCompatActivity() {
+    private lateinit var ivRecentAppsLogo: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        ivRecentAppsLogo = findViewById(R.id.ivRecentAppsLogo)
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
